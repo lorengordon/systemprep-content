@@ -1,3 +1,3 @@
 base:
   '*':
-    - ash-linux
+    - ash-linux.stig
