@@ -1,6 +1,6 @@
 .NET:
   4.5.51209:
-    installer: 'salt://dotnet_pkg/dotnetfiles/4.5.51209/NDP452-KB2901907-x86-x64-AllOS-ENU.exe'
+    installer: 'https://s3.amazonaws.com/systemprep-repo/windows/dotnet/4.5.51209/NDP452-KB2901907-x86-x64-AllOS-ENU.exe'
     full_name: 'Microsoft .NET Framework 4.5.2'
     reboot: False
     install_flags: '/q /norestart'
