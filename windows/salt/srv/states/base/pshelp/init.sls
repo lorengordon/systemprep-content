@@ -2,8 +2,7 @@
 
 #Update the Powershell Help files
 UpdatePSHelp:
-  cmd:
-    - run
-    - name: 'Update-Help -Source {{ pshelp.source }} -Force'
+  cmd.run:
+    - name: 'Update-Help -SourcePath {{ pshelp.source }} -Force'
     - shell: powershell
     - unless: '$($PSVersiontable.PSVersion.Major) -lt 3'
