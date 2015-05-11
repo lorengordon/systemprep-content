@@ -9,5 +9,9 @@ will restart the instance again, automatically.
 - Open a PowerShell window and run the following commands:
   - `mkdir C:\pshelp`
   - `Save-Help -Module * -DestinationPath C:\pshelp -Force -Verbose`
-- Delete the files from the `pshelpfiles` directory and replace them with the 
-files from the `C:\pshelp` directory on the instance
+- Create a zip file of the contents of C:\pshelp (just the contents, don't 
+include the directory)
+- Name the zip file 'pshelp-contents.zip'
+- Create an md5sum of 'pshelp-contents.zip', named 'pshelp-contents.zip.md5'
+- Upload 'pshelp-content.zip' and 'pshelp-contents.zip.md5' to the S3 bucket: 
+https://s3.amazonaws.com/systemprep-repo/windows/pshelp/
