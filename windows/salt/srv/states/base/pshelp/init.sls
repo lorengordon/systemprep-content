@@ -1,8 +1,48 @@
-{% from "pshelp/map.jinja" import pshelp with context %}
+﻿{% from "pshelp/map.jinja" import pshelp with context %}
 
-#Update the Powershell Help files
+
+# Get the pshelp-content
+GetPSHelpContent:
+  file.managed:
+    - name: {{ pshelp.filename }}
+    - source: {{ pshelp.source }}
+    - source_hash: {{ pshelp.source_hash }}
+    - makedirs: True
+    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+
+
+# Clean the pshelp directory
+CleanPSHelpDir:
+  file.directory:
+    - name: {{ pshelp.extract_dir }}
+    - clean: True
+    - require:
+      - file: GetPSHelpContent
+    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+
+
+# Extract pshelp-content:
+ExtractPSHelpContent:
+  cmd.run:
+    - name: '
+    new-object -com shell.application | % {
+        $_.namespace("{{ pshelp.extract_dir }}").copyhere($_.namespace("{{ pshelp.filename }}").items(), 0x14)
+    }'
+    - shell: powershell
+    - require:
+      - file: CleanPSHelpDir
+    - onchanges:
+      - file: GetPSHelpContent
+    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+
+
+# Update the Powershell Help files
 UpdatePSHelp:
   cmd.run:
-    - name: 'Update-Help -SourcePath {{ pshelp.source }} -Force'
+    - name: 'Update-Help -SourcePath {{ pshelp.extract_dir }} -Force -Verbose'
     - shell: powershell
-    - unless: '$($PSVersiontable.PSVersion.Major) -lt 3'
+    - require:
+      - cmd: ExtractPSHelpContent
+    - onchanges:
+      - file: GetPSHelpContent
+    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
