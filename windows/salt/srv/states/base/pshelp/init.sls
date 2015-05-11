@@ -8,7 +8,7 @@ GetPSHelpContent:
     - source: {{ pshelp.source }}
     - source_hash: {{ pshelp.source_hash }}
     - makedirs: True
-    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+    - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
 
 
 # Clean the pshelp directory
@@ -18,7 +18,7 @@ CleanPSHelpDir:
     - clean: True
     - require:
       - file: GetPSHelpContent
-    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+    - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
 
 
 # Extract pshelp-content:
@@ -33,7 +33,7 @@ ExtractPSHelpContent:
       - file: CleanPSHelpDir
     - onchanges:
       - file: GetPSHelpContent
-    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+    - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
 
 
 # Update the Powershell Help files
@@ -45,4 +45,4 @@ UpdatePSHelp:
       - cmd: ExtractPSHelpContent
     - onchanges:
       - file: GetPSHelpContent
-    - onlyif: 'powershell $($PSVersiontable.PSVersion.Major) -ge 3'
+    - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
