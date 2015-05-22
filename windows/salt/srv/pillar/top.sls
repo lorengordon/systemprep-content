@@ -1,3 +1,4 @@
 base:
   '*':
     - ash-windows
+    - pshelp
