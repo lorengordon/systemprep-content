@@ -12,5 +12,24 @@ ash-windows:
 
 pshelp:
   lookup:
-    source : 'https://s3.amazonaws.com/systemprep-repo/windows/pshelp/pshelp-content.zip'
-    source_hash : 'https://s3.amazonaws.com/systemprep-repo/windows/pshelp/pshelp-content.zip.SHA512'
+    source: 'https://s3.amazonaws.com/systemprep-repo/windows/pshelp/pshelp-content.zip'
+    source_hash: 'https://s3.amazonaws.com/systemprep-repo/windows/pshelp/pshelp-content.zip.SHA512'
+
+netbanner:
+  custom_network_labels:
+    Unclass:
+      CustomBackgroundColor: '1'
+      CustomDisplayText: 'UNCLASSIFIED'
+      CustomForeColor: '2'
+    NIPR:
+      CustomBackgroundColor: '1'
+      CustomDisplayText: 'UNCLASSIFIED//FOUO'
+      CustomForeColor: '2'
+    SIPR:
+      CustomBackgroundColor: '3'
+      CustomDisplayText: 'SECRET AND AUTHORIZED TO PROCESS NATO SECRET'
+      CustomForeColor: '2'
+    JWICS: 
+      CustomBackgroundColor: '4'
+      CustomDisplayText: 'TOPSECRET//SI/TK/NOFORN                  **G//HCS//NATO SECRET FOR APPROVED USERS IN SELECTED STORAGE SPACE**'
+      CustomForeColor: '1'
