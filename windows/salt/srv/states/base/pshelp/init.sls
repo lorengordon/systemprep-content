@@ -33,7 +33,7 @@ ExtractPSHelpContent:
       - file: CleanPSHelpDir
     - onchanges:
       - file: GetPSHelpContent
-    - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
+    - onlyif: 'if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw }'
 
 
 # Update the Powershell Help files
@@ -45,4 +45,4 @@ UpdatePSHelp:
       - cmd: ExtractPSHelpContent
     - onchanges:
       - file: GetPSHelpContent
-    - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
+    - onlyif: 'if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw }'
