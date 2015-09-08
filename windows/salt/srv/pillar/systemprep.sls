@@ -4,6 +4,16 @@
 #Set the SYSTEMDRIVE value to the first two characters of SYSTEMROOT, see http://msdn.microsoft.com/en-us/library/cc231436.aspx
 {% set systemdrive = systemroot|truncate(2, True, '') %}
 
+systemprep:
+  states:
+    - dotnet4
+    - pshelp
+    - netbanner.custom
+    - emet
+    - ash-windows.stig
+    - ash-windows.iavm
+    - ash-windows.delta
+
 ash-windows:
   lookup:
     logdir: '{{ systemdrive }}\SystemPrep\Logs\Ash'
