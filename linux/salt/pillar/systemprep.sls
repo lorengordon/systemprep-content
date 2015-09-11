@@ -1,3 +1,3 @@
 systemprep:
-  states:
+  base-states:
     - ash-linux.stig

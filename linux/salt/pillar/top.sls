@@ -1,3 +1,4 @@
 base:
   '*':
     - systemprep
+    - enterprise-layer
