@@ -5,7 +5,7 @@
 {% set systemdrive = systemroot|truncate(2, True, '') %}
 
 systemprep:
-  states:
+  base-states:
     - dotnet4
     - pshelp
     - netbanner.custom
