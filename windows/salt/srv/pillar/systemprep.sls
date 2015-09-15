@@ -12,6 +12,7 @@ systemprep:
     - emet
     - ash-windows.stig
     - ash-windows.iavm
+  post-states:
     - ash-windows.delta
 
 ash-windows:
