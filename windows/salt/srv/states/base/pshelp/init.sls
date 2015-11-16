@@ -15,7 +15,9 @@ GetPSHelpContent:
 CleanPSHelpDir:
   file.directory:
     - name: {{ pshelp.extract_dir }}
-    - clean: True
+{#- Remove `clean: True` due to a bug, where even managed files are removed #}
+{#- Fixed in salt v2015.8.2 #}
+{#-    - clean: True #}
     - require:
       - file: GetPSHelpContent
     - onlyif: 'powershell -command "& { if ($($PSVersiontable.PSVersion.Major) -ge 3) { return 0 } else { throw } }"'
