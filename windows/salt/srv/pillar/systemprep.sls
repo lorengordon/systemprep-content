@@ -27,8 +27,10 @@ pshelp:
     source_hash: 'https://s3.amazonaws.com/systemprep-repo/windows/pshelp/pshelp-content.zip.SHA512'
 
 netbanner:
-  custom_network_labels:
-    Unclass:
-      CustomBackgroundColor: '1'
-      CustomDisplayText: 'UNCLASSIFIED'
-      CustomForeColor: '2'
+  lookup:
+    network_label: 'Unclass'
+    custom_network_labels:
+      Unclass:
+        CustomBackgroundColor: '1'
+        CustomDisplayText: 'UNCLASSIFIED'
+        CustomForeColor: '2'
