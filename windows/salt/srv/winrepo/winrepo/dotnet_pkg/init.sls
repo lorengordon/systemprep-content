@@ -43,7 +43,7 @@ common_params:
 {# `versions` are winrepo params that are distinct per version. #}
 versions:
   {% for version,params in versions.items() %}
-  {{ version }}:
+  '{{ version }}':
     installer: >-
       https://s3.amazonaws.com/systemprep-repo/windows/dotnet/{{
       version }}/{{ params.filename }}

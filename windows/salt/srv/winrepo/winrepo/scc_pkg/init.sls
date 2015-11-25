@@ -28,7 +28,7 @@ common_params:
 {# `versions` are winrepo params that are distinct per version. #}
 versions:
   {% for version in versions %}
-  {{ version }}:
+  '{{ version }}':
     installer: >-
       https://path/to/your/SCC_{{ version }}_Windows_Setup.exe
     uninstaller: >-
