@@ -27,7 +27,7 @@ common_params:
 {# `versions` are winrepo params that are distinct per version. #}
 versions:
   {% for version in versions %}
-  {{ version }}:
+  '{{ version }}':
     installer: >-
       https://s3.amazonaws.com/systemprep-repo/windows/emet/{{
       version }}/EMET+{{ version }}+Setup.msi
