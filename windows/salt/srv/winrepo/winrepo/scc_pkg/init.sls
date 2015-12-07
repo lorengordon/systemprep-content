@@ -22,7 +22,7 @@ pillar: '{{ name }}:winrepo'
 common_params:
   full_name: 'SCAP Compliance Checker'
   reboot: False
-  install_flags: ' /S'
+  install_flags: ' /S /svc=no /edit=no'
   msiexec: False
   uninstall_flags: ' /S'
 {# `versions` are winrepo params that are distinct per version. #}
