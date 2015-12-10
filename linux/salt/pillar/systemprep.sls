@@ -2,6 +2,7 @@ systemprep:
   base-states:
     - ash-linux.stig
   post-states:
+    - scc.scan
 
 scc:
   lookup:

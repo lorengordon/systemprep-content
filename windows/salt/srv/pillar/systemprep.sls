@@ -20,6 +20,7 @@ systemprep:
     - ash-windows.iavm
   post-states:
     - ash-windows.delta
+    - scc.scan
 
 ash-windows:
   lookup:
