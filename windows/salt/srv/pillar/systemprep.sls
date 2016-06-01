@@ -12,6 +12,7 @@
 
 systemprep:
   base-states:
+    - name-computer
     - dotnet4
     - pshelp
     - netbanner.custom
