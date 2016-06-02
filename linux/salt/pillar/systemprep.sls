@@ -1,5 +1,6 @@
 systemprep:
   base-states:
+    - name-computer
     - ash-linux.stig
   post-states:
     - scc.scan
