@@ -21,6 +21,7 @@ systemprep:
     - ash-windows.iavm
   post-states:
     - ash-windows.delta
+    - ash-windows.custom
     - scc.scan
 
 ash-windows:
