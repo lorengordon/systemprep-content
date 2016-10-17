@@ -92,8 +92,9 @@ netbanner:
 scc:
   winrepo:
     versions:
-      '4.0.1':
-        installer: https://s3.amazonaws.com/systemprep-repo/windows/scc/SCC_4.0.1_Windows_Setup.exe
+      '4.1.1':
+        installer: https://s3.amazonaws.com/systemprep-repo/windows/scc/SCC_4.1.1_Windows_Setup.exe
   lookup:
+    version: '4.1.1'
     outputdir: '{{ systemdrive }}\SystemPrep\SCC'
     content: {{ scc_content }}
