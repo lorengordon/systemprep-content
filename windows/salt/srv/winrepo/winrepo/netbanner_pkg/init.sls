@@ -69,6 +69,6 @@ the `package.common_params` dictionary.
       package.pillar ~ ':common_params',
       default=package.common_params,
       merge=True)) %}
-  {{ version }}:
+  '{{ version }}':
     {{ params }}
   {%- endfor %}
