@@ -41,7 +41,7 @@ ExtractPSHelpContent:
 # Update the Powershell Help files
 UpdatePSHelp:
   cmd.run:
-    - name: 'Update-Help -SourcePath {{ pshelp.extract_dir }} -Force -Verbose'
+    - name: 'Update-Help -SourcePath {{ pshelp.extract_dir }} -Module (Get-Module -ListAvailable | Where HelpInfoUri) -Force'
     - shell: powershell
     - require:
       - cmd: ExtractPSHelpContent

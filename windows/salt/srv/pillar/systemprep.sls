@@ -54,26 +54,26 @@ netbanner:
     source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE9_V1R7_STIG_SCAP_1-0_Benchmark.zip.SHA512
   - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE10_V1R8_STIG_SCAP_1-1_Benchmark.zip
     source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE10_V1R8_STIG_SCAP_1-1_Benchmark.zip.SHA512
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE11_V1R6_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE11_V1R6_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE11_V1R8_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Microsoft_IE11_V1R8_STIG_SCAP_1-1_Benchmark.zip.SHA512
 'DomainController Microsoft Windows Server 2012 R2':
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_DC_V2R5_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_DC_V2R5_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_DC_V2R7_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_DC_V2R7_STIG_SCAP_1-1_Benchmark.zip.SHA512
 'MemberServer Microsoft Windows Server 2012 R2':
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_MS_V2R5_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_MS_V2R5_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_MS_V2R7_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2012_and_2012_R2_MS_V2R7_STIG_SCAP_1-1_Benchmark.zip.SHA512
 'DomainController Microsoft Windows Server 2008 R2':
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_DC_V1R21_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_DC_V1R21_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_DC_V1R23_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_DC_V1R23_STIG_SCAP_1-1_Benchmark.zip.SHA512
 'MemberServer Microsoft Windows Server 2008 R2':
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_MS_V1R22_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_MS_V1R22_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_MS_V1R24_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_2008_R2_MS_V1R24_STIG_SCAP_1-1_Benchmark.zip.SHA512
 'Workstation Microsoft Windows 8.1':
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_8_and_8-1_V1R15_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_8_and_8-1_V1R15_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_8_and_8-1_V1R17_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_8_and_8-1_V1R17_STIG_SCAP_1-1_Benchmark.zip.SHA512
 'Workstation Microsoft Windows 10':
-  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_10_V1R3_STIG_SCAP_1-1_Benchmark.zip
-    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_10_V1R3_STIG_SCAP_1-1_Benchmark.zip.SHA512
+  - source: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_10_V1R6_STIG_SCAP_1-1_Benchmark.zip
+    source_hash: https://s3.amazonaws.com/systemprep-repo/windows/scap-content/U_Windows_10_V1R6_STIG_SCAP_1-1_Benchmark.zip.SHA512
 {%- endload %}
 
 {%- set os_ver = salt['grains.get']('osfullname') %}
