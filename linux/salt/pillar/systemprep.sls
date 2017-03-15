@@ -13,3 +13,7 @@ scc:
     content:
       - source: https://s3.amazonaws.com/systemprep-repo/linux/custom/scap-content/U_RedHat_6_V1R13_STIG_SCAP_1-1_Benchmark.zip
         source_hash: https://s3.amazonaws.com/systemprep-repo/linux/custom/scap-content/U_RedHat_6_V1R13_STIG_SCAP_1-1_Benchmark.zip.SHA512
+
+ash-linux:
+  lookup:
+    scap-profile: C2S
