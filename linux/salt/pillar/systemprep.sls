@@ -1,7 +1,9 @@
 systemprep:
   base-states:
     - name-computer
+    - ash-linux.vendor
     - ash-linux.stig
+    - ash-linux.iavm
   post-states:
     - scc.scan
 
